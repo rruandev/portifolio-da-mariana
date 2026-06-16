@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Phone, Github, Linkedin, Figma } from "lucide-react";
+import { Mail, Phone, Linkedin } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function Contact() {
@@ -24,13 +24,14 @@ export function Contact() {
 
         <div className="mt-6 flex justify-center gap-3">
           {[
-            { Icon: Linkedin, href: "#" },
-            { Icon: Github, href: "#" },
-            { Icon: Figma, href: "#" },
+            { Icon: Linkedin, href: "https://www.linkedin.com/in/marianavianaferreira/" },
           ].map(({ Icon, href }, i) => (
             <a
               key={i}
               href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="w-10 h-10 rounded-full border border-white/10 bg-white/5 hover:bg-purple-500/20 hover:border-purple-400/40 flex items-center justify-center transition-all"
             >
               <Icon className="w-4 h-4 text-white/80" />
